@@ -1,5 +1,17 @@
 const mongoose = require("mongoose");
 
+const ComentarioSchema = new mongoose.Schema({
+  usuario: String,
+  comentario: String,
+  fecha: Date
+})
+
+const GradeSchema = new mongoose.Schema({
+  score: Number,
+  fecha: Date
+})
+
+
 const lugarSchema = new mongoose.Schema(
   {
     long: {
@@ -26,6 +38,8 @@ const lugarSchema = new mongoose.Schema(
     comuna: String,
     codigo_postal: String,
     codigo_postal_argentino: String,
+    comentarios: [ComentarioSchema],
+    puntaje: [GradeSchema]
   },
   {
     timestamps: true,

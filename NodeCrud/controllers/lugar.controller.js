@@ -59,6 +59,7 @@ const getDosBarrios = async (req, res) => {
   }
 }
 
+//Lugares que este mas cerca del punto central de CABA a los que estan mas alejados de este punto
 const getLugaresCerca = async (req, res) => {
   try {
     const pipeline = [

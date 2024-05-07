@@ -14,15 +14,16 @@ const GradeSchema = new mongoose.Schema({
 
 const lugarSchema = new mongoose.Schema(
   {
-    long: {
-      type: Number,
-      required: true
+    ubicacion: {
+      lat: {
+        type: Number,
+        required: true,
+      },
+      long: {
+        type: Number,
+        required: true,
+      },
     },
-    lat: {
-      type: Number,
-      required: true
-    },
-    
     id: Number,
     nombre: String,
     categoria: String,
@@ -33,7 +34,7 @@ const lugarSchema = new mongoose.Schema(
     horario: String,
     calle_nombre:String,
     calle_altura: String,
-    calle_cruce: String,
+    direccion_completa:String,
     barrio: String,
     comuna: String,
     codigo_postal: String,
